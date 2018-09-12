@@ -12,6 +12,7 @@
 		355F61C7214918050057EEB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F61C5214918050057EEB8 /* Main.storyboard */; };
 		355F61C9214918060057EEB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355F61C8214918060057EEB8 /* Assets.xcassets */; };
 		355F61CC214918060057EEB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F61CA214918060057EEB8 /* LaunchScreen.storyboard */; };
+		355F61D621491C380057EEB8 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F61D521491C380057EEB8 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		355F61C8214918060057EEB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		355F61CB214918060057EEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355F61CD214918060057EEB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355F61D521491C380057EEB8 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		355F61C0214918050057EEB8 /* Window Shopper */ = {
 			isa = PBXGroup;
 			children = (
+				355F61D421491BD80057EEB8 /* View */,
+				355F61D3214919DD0057EEB8 /* Controller */,
 				355F61C1214918050057EEB8 /* AppDelegate.swift */,
-				355F61C3214918050057EEB8 /* ViewController.swift */,
 				355F61C5214918050057EEB8 /* Main.storyboard */,
 				355F61C8214918060057EEB8 /* Assets.xcassets */,
 				355F61CA214918060057EEB8 /* LaunchScreen.storyboard */,
 				355F61CD214918060057EEB8 /* Info.plist */,
 			);
 			path = "Window Shopper";
+			sourceTree = "<group>";
+		};
+		355F61D3214919DD0057EEB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				355F61C3214918050057EEB8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		355F61D421491BD80057EEB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				355F61D521491C380057EEB8 /* CurrencyTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355F61D621491C380057EEB8 /* CurrencyTextField.swift in Sources */,
 				355F61C4214918050057EEB8 /* ViewController.swift in Sources */,
 				355F61C2214918050057EEB8 /* AppDelegate.swift in Sources */,
 			);
