@@ -12,6 +12,8 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var wageText: CurrencyTextField!
     @IBOutlet weak var priceText: CurrencyTextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +28,22 @@ class MainVC: UIViewController {
         
         wageText.inputAccessoryView = calcButton
         priceText.inputAccessoryView = calcButton
+        
+        resultLabel.isHidden = true
+        hoursLabel.isHidden = true
     }
     
     // selectors work with objC functions
     @objc func calculate(){
-        print("ok so far")
+        if let wagetext = wageText.text, let pricetext = priceText.text{
+            if let wage = Double(wagetext), let price = Double(pricetext) {
+                view.endEditing(true)  // hide the keyboard
+                resultLabel.isHidden = false
+                hoursLabel.isHidden = false
+                resultLabel.text = "\(Wage.getHours(forWage: wage, andPrice: price))" // calculate, assign result and show it
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +51,10 @@ class MainVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func clearCalculatorClick(_ sender: Any) {
+        resultLabel.isHidden = true
+        hoursLabel.isHidden = true
+    }
+    
 }
 
